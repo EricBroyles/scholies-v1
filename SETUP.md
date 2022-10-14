@@ -11,3 +11,4 @@ git config --global user.name "Your Name"
 
 navigate into project folder inside command line
 
+dont forget to add the commit message or it wil just sit and load
