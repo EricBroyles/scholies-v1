@@ -1,20 +1,51 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom"
+
 import { app } from './config/firebaseConfig';
 import {getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged} from 'firebase/auth';
-import './assests/test.css'
+
+
+import './assests/App.css'
+import Home from './pages/home/Home';
+import Login from './pages/login/Login'
+import Register from './pages/register/Register'
+import Explore from './pages/explore/Explore';
+
+
+
 function App() {
- 
-  document.getElementById("cards").onmousemove = e => {
-    for(const card of document.getElementsByClassName("card")) {
-      const rect = card.getBoundingClientRect(),
-            x = e.clientX - rect.left,
-            y = e.clientY - rect.top;
+  return(
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/explore" element={<Explore/>}/>
+        </Routes>
+      </Router>
+    </>
+  )
+}
+
+export default App;
+
+
+
+
+
+//import './assests/test.css'
+
+// document.getElementById("cards").onmousemove = e => {
+  //   for(const card of document.getElementsByClassName("card")) {
+  //     const rect = card.getBoundingClientRect(),
+  //           x = e.clientX - rect.left,
+  //           y = e.clientY - rect.top;
   
-      card.style.setProperty("--mouse-x", `${x}px`);
-      card.style.setProperty("--mouse-y", `${y}px`);
-    };
-  }
+  //     card.style.setProperty("--mouse-x", `${x}px`);
+  //     card.style.setProperty("--mouse-y", `${y}px`);
+  //   };
+  // }
   // const handleOnMouseMove = e => {
   //   const {currentTarget : target} = e;
 
@@ -30,10 +61,8 @@ function App() {
   //   card.onmouseover = e => handleOnMouseMove(e);
   // }
 
-  return(
-    
-    <div>
-      <div id="cards">
+
+/* <div id="cards">
         <div className="card">
           <div className="card-content">
             <div className="card-image">
@@ -130,15 +159,16 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */
 
-      
-    </div>
-    
-    )
-}
 
-export default App;
+
+
+
+
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
  // const auth = getAuth();

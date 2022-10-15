@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
+
+.header {
+    font-family: 'Poppins';
+    color: white;
+    font-size: 24px;
+}
+
+.header:hover {
+    color: rgb(113, 176, 119);
+    cursor: pointer;
+    transition: 500ms;
+}
+
+
+
+@media only screen and (max-width: 600px) { 
+  #landing-drawer-desktop { 
+    display: none; 
+  } 
+}
+@media only screen and (min-width: 600px) { 
+  #landing-drawer-mobile { 
+    display: none; 
+  } 
+}
+
+
+@media only screen and (max-width: 600px) { 
+  #nav-explore-link { 
+    display: none; 
+  } 
+}

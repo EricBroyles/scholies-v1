@@ -1,0 +1,12 @@
+:root {
+    --bg-color: rgb(20, 20, 20);
+    /* define global vars here */
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    height: 100vh;
+    margin: 0px;
+    
+    padding: 0px;
+  }

@@ -17,15 +17,29 @@
  *     about page, issue submit, 
  */
 
+/**
+ * THINGS TO MAKE
+ * Get fonts for main welcom message, secondary info/welcome/statment
+ * get font for SCHOLIES.com
+ * 
+ * place these text
+ * 
+ * make sticky nav bar, with hamburger
+ * 
+ * have the tips of the 3 items 
+ * figure out how to do scroll snapping
+ */
+
 import React from "react";
 import { useState } from 'react';
+import LandingNavBar from "../../components/LandingNavBar";
 
 function Home(){
     
     
     return(
         <div>
-
+            <LandingNavBar />
         </div>
     )
 }
